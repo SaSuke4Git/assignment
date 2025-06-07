@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Netflix</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-brand">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+          alt="netflix-logo"
+          class="logo"
+        />
+      </div>
+      <div class="navbar-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Movies</a>
+        <a href="#" class="nav-link">Series</a>
+        <a href="#" class="nav-link">TV Show</a>
+      </div>
+      <div class="navbar-right">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-bell"></i>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+          alt="Profile image"
+          class="profile-icon"
+        />
+      </div>
+      <button class="sign-btn" id="signInBtn" onclick="openLoginForm()">
+        <span id="signInText">SIGN IN</span>
+      </button>
+      <div class="login-form" id="loginForm">
+        <div class="login-container">
+          <h3>Login</h3>
+          <form onsubmit="handleLogin(event)">
+            <input
+              type="text"
+              id="username"
+              placeholder="Username"
+              required
+            /><br />
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+              max="12"
+            /><br />
+            <button type="submit">Login</button>
+          </form>
+          <button class="link-btn" onclick="window.location.href='signup.html'">
+            Sign Up
+          </button>
+          <button class="back-btn" onclick="closeLoginForm()">Go Back</button>
+        </div>
+      </div>
+      <button class="log-out-btn" id="logOutBtn" onclick="logOut()">
+        Log Out
+      </button>
+    </nav>
+    <header class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Money Heist</h1>
+        <p class="hero-description">
+          Eight thieves take hostages and lock themselves in the Royal Mint of
+          Spain as a criminal mastermind manipulates the police to carry out his
+          plan
+        </p>
+        <div class="hero-button">
+          <button class="btn btn-play"><i class="fa fa-play"></i>Play</button>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="trending">
+        <h2 class="top">TOP 10</h2>
+        <div class="content-row">
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">1</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://wallpapercave.com/wp/wp9236028.jpg"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">2</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/V3wM9yww_fcJYos8clmbu9vUf5tXvfSp3VpKV6bM9cw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXQuY29t/L3cvZnVsbC8xLzEv/Zi8yMjg5MC0zODQw/eDIxNjAtZGVza3Rv/cC00ay1icmVha2lu/Zy1iYWQtd2FsbHBh/cGVyLXBob3RvLmpw/Zw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">3</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/qc7Me74HSnvzBQaOiMj_EjgmW1mpx8gSHgSRE_I2Kmw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/Ymhkdy5uZXQvaW0v/d2VkbmVzZGF5LW5l/dGZsaXgtc2VyaWVz/LXBvc3Rlci13YWxs/cGFwZXItMTA5ODY3/X3c2MzUud2VicA"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">4</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/PD44tc6-pJKmMs1rC8eIWLp_qaxrqfWEOh0ASZOj_CE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJiYXQuY29t/L2ltZy84OTM1NDAt/ZnJlZS1hbGwtb2Yt/dXMtYXJlLWRlYWQt/dGVtcGxhdGUtcG93/ZXJwb2ludC1hbmQt/Z29vZ2xlLXNsaWRl/cy5qcGc"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">5</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/b5h04dIWRG4ld4bhEHG7KqT2lhDUid3bW8H3VGUt0f8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/d2FsbHBhcGVyc2Fm/YXJpLmNvbS84MS8y/L0VDdG11Vy5qcGc"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">6</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://i.cdn.newsbytesapp.com/images/l239_30531625716009.jpg"
+              alt="theif"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">7</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1730402433-time-cut-netflix-horror-review-6723d875ba8d5.jpg?crop=1xw:1xh;center,top&resize=980:*"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">8</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://lightbox-prod.imgix.net/images/assets/BANNER_WIDE_mac_11694075_212209AD-83A4-4BC8-B3F427B75B8AE35C.jpg"
+              alt="web"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">9</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://territorystudio.com/wp-content/uploads/2020/03/Film_TheValhallaMurders_L_003.jpg"
+              alt="img"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge">10</div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="trending">
+        <h2 class="top">FOR YOU</h2>
+        <div class="content-row">
+          <div class="content-card">
+            <img
+              src="https://cdn0.desidime.com/cdn-cgi/image/fit=contain,f=auto,onerror=redirect,w=1200,h=675,q=90/attachments/photos/1004224/original/et00301886-vpwtttdmdt-landscape.jpg"
+              alt="salaar"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://occ-0-8407-90.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd4Ly4log4uLNV3dn2ENHGGBw_Ts1xyP5l_8MO3KBNZTeR58DPKmOg1mSB480jK4RlrbR5CO9CqGLjrx-kYn43yWL56RujRPnxBbh25jhqyMu3Tthz12t2rUv0HtFFOfboQgoQ.webp?r=7c8"
+              alt="rebelmoon"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img src="https://i.redd.it/m6ivshw4y0v41.png" alt="dark" />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://wallpapercave.com/wp/wp1917128.jpg"
+              alt="daredevil"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/274/33/283/stranger-things-netflix-wallpaper-preview.jpg"
+              alt="strangerthings"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/kIpnAquVIKnVSv4QoqXx6-Tg5SfgvG8IqYVgYzC_ddo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDUyODE3/MzEuanBn"
+              alt="endgame"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="container">
+      <section class="trending">
+        <h2 class="top">TOP RATED</h2>
+        <div class="content-row">
+          <div class="content-card">
+            <img
+              src="https://www.bizzbuzz.news/h-upload/2024/11/14/1943306-lucky-bhaskar-censor-done-positive-inside-buzz-ahead-of-release-2.webp"
+              alt="lucky"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://files.merca20.com/uploads/2025/03/What-is-Caught-the-series-thats-causing-a-sensation-on-Netflix-about-.jpg"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSS4yykCHcbnWswZjKkHmYUfuy4FaEsppXMwSgTjNvb3WbPMjxaRweSa6PkzVnfJC6izo&usqp=CAU"
+              alt="territory"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://wallpapers.com/images/hd/netflix-ozark-tv-show-itvsrs89mkm2vp3m.jpg"
+              alt="oskar"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQiRw3PVetCx5DCGhRrcNiHtmOH7ON-3GIw&s"
+              alt="titans"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-card">
+            <img
+              src="https://imgs.search.brave.com/8cPZbqdUri4b5VgMOgpVEU2a7AjrRWhEMjC2LxLFL7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXM3LmFscGhhY29k/ZXJzLmNvbS8xMTgv/dGh1bWJiaWctMTE4/MTU4Mi53ZWJw"
+              alt="squid-game"
+            />
+
+            <div class="card-overlay">
+              <div class="overlay-top">
+                <div class="netflix-badge"></div>
+              </div>
+              <div class="overlay-bottom">
+                <div class="overlay-controls">
+                  <div class="control-btn play-btn"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h2 class="footer-head">Company</h2>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2 class="footer-head">Need Help?</h2>
+          <ul>
+            <li><a href="#">Visit Help Center</a></li>
+            <li><a href="#">Share Feedback</a></li>
+            <li><a href="#">Corporate Information</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <button class="service-code">Service Code</button>
+          <p class="copyright">© 1997-2024 Netflix, Inc.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="front.js"></script>
+  </body>
+</html>
